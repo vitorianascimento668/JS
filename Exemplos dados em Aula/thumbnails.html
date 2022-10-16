@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnails</title>
+</head>
+<body>
+    <input type="file" accept="image/*" id="imagem">
+    <button onclick="mostrar()">Mostrar</button>
+    <div id="area">
+
+    </div>
+    <script>
+        function mostrar(){
+            let imagem = document.getElementById('imagem').files[0]
+             let img = document.createElement('img')
+             img.src = URL.createObjectURL(imagem) // cria-se uma URL, usando o objeto URL.create 
+             img.width = 200;
+             document.getElementById('area').appendChild(img) //adicionando a imagem a tag area.
+        }
+    </script>
+</body>
+</html>

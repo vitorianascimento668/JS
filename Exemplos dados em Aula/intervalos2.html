@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervalos / TIME 22</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <button onclick="comecar()">Rodar</button>
+    <button onclick="parar()">Parar</button>
+    <div class="demo">
+    </div>
+    <script>
+        /*O setTimeOut ele ESPERA um x tempo para pode roda, e depois que ele 'roda' acaba a função, podemos passa o nome da function ou ela propria dentro dele.*/
+        let timer ;
+
+        function comecar(){
+            timer = setTimeout(function(){
+            document.querySelector('.demo').innerHTML = 'RODOU'
+        },2000 )}
+
+        function parar(){
+            clearTimeout(timer)
+        }
+    </script>
+</body>
+</html>

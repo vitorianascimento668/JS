@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Class do elemento 2</title>
+    <style>
+
+        .verde{
+            background-color:green;
+            color:white;
+        }
+        .preto{
+            background-color:black;
+            color:white;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="exemplo">
+        Vitória
+    </div>
+    <button onclick="trocar()" class="preto">
+        Botão
+    </button>
+
+    <script>
+        function trocar(){
+            if(document.querySelector('button').classList.contains('preto')){
+                document.querySelector('button').classList.remove('preto')
+                document.querySelector('button').classList.add('verde')
+            }else{
+                document.querySelector('button').classList.remove('verde')
+                document.querySelector('button').classList.add('preto')
+            }
+        }
+    </script>
+</body>
+</html>

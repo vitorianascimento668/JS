@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Array 3</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        
+        let lista = [45,4,9,16,25,32,17];
+        let lista2 =[] // retorna no MAP--------------
+        let lista3 = [] // retorna no FOR LOOP -------
+        let lista4 = [] // retorna no FILTER ---------
+        let lista5 = [] // retorna no EVERY ----------
+
+        //USANDO O MAP-------------------------------------
+        // O MAP tem a mesma 'serventia do FOR', ele faz a passagem por cada valor, nesse caso estamos multiplicando os valores por 2, e o ITEM que foi passado como parametro para a function e a lista que vai ser multiplicada, e o return vai fazer um novo array, com o resultado da multplicação, e esse resultado será armazenado na lista2 --- MAPEAR TODAS OS ITENS DO ARRAY
+        lista2 = lista.map(function(item){
+            return item * 2
+
+        })
+        let res = lista2;
+        console.log(res)
+        //---------------------------------------------------
+
+        // USANDO O FOR, DA PRATICAMENTE A MESMA COISA.
+        for (let i in lista ){
+            lista3.push(lista[i]* 2)
+        }
+        let res2 = lista3;
+        console.log(res2)
+        //----------------------------------------------------
+        //USANDO O FILTER
+        // O FILTER somente aceita valores que forem verdadeiros, isso é se o valor do item/lista for verdadeiro, sera inserido o valor no array que sera gerado, se o retorno for False, ele então ignora completamente o valor, e descarta.
+
+        lista4 = lista.filter(function(item/*LISTA*/){
+            if (item < 20){
+                return true;
+            }else{
+                return false;
+            }
+        })
+        let res3 = lista4
+        console.log(res3)
+        //----------------------------------------------------
+
+        //USANDO O EVERY
+        lista5 = lista.every(function(item2){
+            return (item2 >10)? true:false;
+        })
+        let res4 = lista5
+        console.log(res4)
+    </script>
+</body>
+</html>

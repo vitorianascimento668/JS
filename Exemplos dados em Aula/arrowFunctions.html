@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        /* 1 OPÇÃO DE FAZER UMA FUNÇÃO DIFERENTE, USANDO A PROPRIA VARIAVEL.
+                            let somar = function (x,y){
+                                return x + y
+                            }
+                            console.log(somar(10,20))
+        */
+       /* 2 OPÇÃO - ARROW FUNCTIONS - USANDO A SETINHA
+                            let soma = (x,y) => {
+                                return x + y } */
+        /* 3 OPÇÃO - ARROW FUNCTIONS - sem usa o return ou abrir chaves
+                            let somar = (y,x) => x + y  
+                                console.log(somar(10,20))
+ 
+        */
+       /* 4 OPÇÃO - ARROW FUNCTIONS - sem usa o parenteses para passa  o parametro
+        let lestrasNoNome = nome => nome.length
+        console.log(lestrasNoNome('abrindo')) */
+        let lestrasNoNome = nome => nome.length
+        console.log(lestrasNoNome('abrindo'))
+    </script>
+</body>
+</html>

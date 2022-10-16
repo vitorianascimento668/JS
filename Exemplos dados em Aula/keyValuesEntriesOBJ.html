@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto: Key, Values e Entries </title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        /*Para pega o INDEX do array usamos o KEYS---------
+                let lista = ['ovo','macarrao','feijao','pipoca']
+                console.log(Object.keys(lista))
+        */
+       /*Para pega os proprios VALORES do array, usamos o VALUES.
+                     let lista = ['ovo','macarrao','feijao','pipoca']
+                    console.log(Object.values(lista))
+       
+       */
+      /*O ENTRIES cria arrays, e dentro de cada array cria o INDEX do array e o VALOR desse array.
+                            let lista = ['ovo','macarrao','feijao','pipoca']
+                         console.log(Object.entries(lista))
+      */
+        let pessoa = {
+            nome:'Bonieky',
+            sobrenome:'Lacerda',
+            idade:90
+        }
+        console.log(Object.entries(pessoa))
+    </script>
+</body>
+</html>

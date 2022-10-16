@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Callbacks</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+       // CALLBACK = Eu te ligo de volta. Quando você tiver um resultado, você execulta a tal função que ela lida com o esperado.
+
+       //Exemplo de CALLBACK!!
+       function alertar(){
+            console.log('Opa, tudo bem?')
+        }
+        let nome  = 'Vitoria'
+        setTimeout(alertar,2000)
+        let sobrenome = 'Lacerda'
+        console.log(`Nome Completo: ${nome} ${sobrenome}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensões</title>
+    <style>
+        body{
+            height:900px;
+        }
+        .texto{
+            width:200px;
+            height:200px;
+            overflow:auto;
+            background-color:#CCC;
+            padding:20px;
+            border:2px solid red;
+
+        }
+        #scrollbutton{
+            width:30px;
+            height:30px;
+            border-radius:15px;
+            background-color:red;
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            z-index:999;
+            cursor:pointer;
+            display:none;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="texto">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, consequatur ab perferendis sunt nulla amet eius quas assumenda ducimus tempora quisquam quasi rem, exercitationem, maxime cumque laboriosam. Officia, eaque ea? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam in sequi accusamus tempora consequuntur quod amet officia perspiciatis beatae. Dolorem repudiandae ipsum, totam fugit cum delectus placeat corporis quidem consectetur?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, recusandae. At porro reprehenderit necessitatibus modi itaque illum ab vero illo odio, ipsa voluptates cum similique, nam ratione aut blanditiis enim.
+    </div>
+    <div id="scrollbutton" onclick="subirTela()">
+
+    </div>
+    <script>
+           function subirTela(){
+            window.scrollTo({
+                top:0,
+                left:0,
+                behavior:"smooth"
+            })
+        }
+        function decidirbotao(){
+           if (window.scrollY == 0){
+            document.getElementById('scrollbutton').style.display='none'
+           }else{
+            document.getElementById('scrollbutton').style.display='block'
+
+           }
+        }
+        //setInterval(decidirbotao,1000)
+        window.addEventListener('scroll',decidirbotao)
+
+    
+    </script>
+</body>
+</html>

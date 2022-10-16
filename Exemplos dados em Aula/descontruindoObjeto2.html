@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descontruindo Objetos</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <button onclick="comecar()">Rodar</button>
+    <button onclick="parar()">Parar</button>
+    <div class="demo">
+    </div>
+    <script>
+        let pessoa = {
+            nome: 'Vitoria',
+            sobrenome:'Nascimento',
+            idade: 90,
+            social: {
+                facebook: '@nascimento688',
+                instagram: {
+                    url:'@CarolineNascimento' , 
+                    seguidores: 150}
+            },
+            nomeCompleto:function(){
+                return `${this.nome} ${this.sobrenome}`
+            }
+        }
+       //Podemos coloca em FUNCTION () na parte do parametro tudo que fariamos fora dela, dentro do parametro e a mesma coisa dos codigos abaixo, feito fora dele.
+        function pegarNomeCompleto({nome,sobrenome = 'Silva'}){
+
+            return `${nome} ${sobrenome}`
+        }
+        console.log(pegarNomeCompleto(pessoa))
+
+        /*
+        A forma de desestrutura uma FUNCTION pode ser feita atravez de uma function que passa como parametro um valor e retorna o valor.nome do ojeto que vc quer pega e depois chamamos essa fuction abaixo.
+
+                        function pegarNomeCompleto(obj){
+                    return obj.nome + '  ' + obj.sobrenome
+                            }
+                            console.log(pegarNomeCompleto(pessoa))
+
+                            */
+        /*-----------------------------------------------------
+        Pegamos um objeto dentro de outro, e podemos RENOMEA-LO A NOSSO MOLDE
+         -----------------let {nome, idade, social:{instagram:{url:instagram,seguidores}}} = pessoa
+        --------------------console.log(instagram,seguidores)
+        ------------------------------------------------------
+        
+        */
+        /*Podemos pegar o OBJETO dentro de outro OBJETO, usando o objeto princiap e depois o objeto secundario, ficando assim: 
+        -------------let {facebook, instagram} = pessoa.social
+        ------------console.log(facebook, instagram)
+        */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação</title>
+    <link rel="stylesheet" href="./css/estilo.css" >
+
+</head>
+<body>
+    <h1>Seja bem vindo!</h1>
+    <aside>
+        <div id="menu-opener" onclick="clicarMenu()" >
+            <img src="/58497.png">
+        </div>
+    
+    <div id="menu-area">
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+</aside>
+    <script>
+            function clicarMenu(){
+                var elemento = document.getElementById('menu-area')
+                if (elemento.style.display == 'none'){
+                    document.getElementById('menu-area').style.display='block'
+                
+                } else{
+                    document.getElementById('menu-area').style.display='none'
+                }
+            }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop FOR</title>
+</head>
+<body>
+    <h1>Ola, seja bem vindo</h1>
+    <div id="demo">    </div>
+    <script>
+        /*FOR LOOP
+        FOR LOOP ARRAY*/
+        let carros = ['FERRARI','FUSCA','PALIO','POSHER','CORROLA','RANGE ROVER']
+        let html = '<ul>'
+            for(let c in carros){
+                html += '<li>'+ carros[c]+'</li>'
+            }
+        html += '</ul>'
+       document.getElementById('demo').innerHTML= html
+
+
+
+       /*let texto = ''
+       for(let c = 1; c <= 50 ; c++){
+            texto = texto + c + '</br>'
+       }
+       document.getElementById('demo').innerHTML= texto*/
+    </script>
+</body>
+</html>

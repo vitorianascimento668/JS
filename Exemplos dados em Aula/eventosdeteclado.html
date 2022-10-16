@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Clique</title>
+</head>
+<body>
+    <h1 id="titulo">Seja bem vindo!</h1>
+    <input onkeyup="digitou(event)" id="campo" type="text" name="usuario" value="nome do usuario">
+    <script>
+        
+            function digitou(e){ // enter
+            if (e.keyCode == 13 && e.ctrlKey == true){
+                let texto = document.getElementById("campo").value
+                console.log(texto)
+        }
+        }
+    </script>
+</body>
+</html>

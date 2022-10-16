@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strigs parte 3</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        /*
+        REPLACE -- PROCURE POR X VALOR, SUBSTITUA POR VALOR Y.
+        trim() -- tira os espaços dado pelo usuario.
+        split() -- Ele vai procura o caractere e gera um array a partir daquele item, ele corta a patir de onde se tem aquele x caractere
+        */
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        alterar("vitoria caroline nascimento e silva".replace('silva','Garcia'),"vitoria caroline nascimento e silva".substr(5,20))
+        let nome = 'Eu gosto de carros                   '
+        let resultado = nome.replace('carros','MOTOS')
+        let slip = 'bolacha ovo safadao massa corante'
+        console.log(slip.split(' '))
+
+        let rsultad = nome.trim()
+        console.log( rsultad.length)
+        console.log(resultado)
+
+
+
+    </script>
+</body>
+</html>

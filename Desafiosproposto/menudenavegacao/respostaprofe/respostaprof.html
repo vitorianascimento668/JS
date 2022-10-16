@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação</title>
+   <style>
+        body{
+        background-color:#FFFFFF;
+            }
+        aside{
+            display:flex;
+            position:fixed;
+            right: 0px;
+            top: 0;
+            z-index: 999;
+        }
+        #menu-opener img{
+            width: 40px;
+            height:40px;
+            cursor:pointer;
+            padding-right: 10px;
+            padding-top: 10px;
+
+        }
+
+        #menu-area{
+            background-color:#CCC;
+            width:0px;
+            height:100vh;
+            text-transform: uppercase;
+            overflow-x:hidden;
+            overflow-y:auto;
+            transition: all ease  .5s;
+        }
+        #menu-area ul {
+            list-style:none;
+            margin-left: -20px;
+        }
+        #menu-area li{
+            padding:5px;
+            cursor:pointer;
+        }
+        #menu-area li:hover{
+            background-color:rgba(255, 255, 255, 0.3);
+            margin-left:-20px;
+            border-radius:10px;
+        }
+        /*.menu-opened{
+            width:200px!important
+        }*/
+    </style>
+
+</head>
+<body>
+    <h1 >Seja bem vindo!</h1>
+    <aside>
+        <div id="menu-opener" onclick="menuToggle()" >
+            <img src="../58497.png">
+        </div>
+    
+    <div id="menu-area" >
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+</aside>
+
+    <script>
+        function menuToggle() {
+        let menuArea = document.getElementById('menu-area')
+        
+        if (menuArea.style.width == '200px'){
+            menuArea.style.width='0px'
+        }else{
+            menuArea.style.width='200px'
+
+        }}
+
+    </script>
+
+   <!-- <script>
+        function menuToggle() {
+            let menuArea = document.getElementById('menu-area');
+            if(menuArea.classList.contains('menu-opened') == true){
+                menuArea.classList.remove('menu-opened');
+            }else{
+                menuArea.classList.add('menu-opened')
+            }
+        }
+    </script>-->
+</body>
+</html>

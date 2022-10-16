@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Array 4</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        let lista = [45,4,9,16,25,32,17];
+        let lista2 =[] // retorna no FIND--------------
+
+
+        //FIND --------------------------------------------
+        // O FIND retorna somente o primeiro item que ele encontra que satisfaça a proposição que foi emposta, pode ter mais possiveis resultados, porém ele ignora, sempre retorna somente 1
+        lista2 = lista.find(function(item){
+           return (item == 16)? true:false
+        })
+        let res = lista2
+        console.log(res)
+        //--------------------------------------------------
+        let lista3 = [ {id:1, nome:'Bonieky', sobrenome:'Lacerda'},
+        {id:2, nome:'Joao', sobrenome:'Paulo'},
+        {id:3, nome:'Domitila', sobrenome:'Alvares'}]
+        let pessoa = lista3.find(function(item){
+            return(item.sobrenome == 'Alvares')? true:false
+        })
+        let res1 = pessoa
+        console.log(res1)
+        // FIDDEINDEX - ele retorna a POSIÇÃO do item, dentro do array;
+    </script>
+</body>
+</html>

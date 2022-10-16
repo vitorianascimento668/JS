@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de Estilo</title>
+    <style>
+        /*.azul{
+            background-color:blue;
+            color:white;
+        }
+        .vermelho{
+            background-color:red;
+            color:white;
+        }
+        .verde{
+            background-color:green;
+            color:black;
+        }*/
+        #telefone{
+            display:none;
+        }
+        #esconde{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Seja bem vindo!</h1> 
+    <div id="telefone">11-99999999</div>
+    <button onclick="mostraTelefone(this)"> Mostra Telefone   </button>
+    <div id='teste' >
+        <img id="img">
+    </div >
+    <button onclick="mostraimagem()">Veja o cachorro</button>
+    <div id="esconde">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam incidunt omnis unde saepe, maxime rem iure necessitatibus ea aspernatur voluptatum adipisci obcaecati, quasi accusantium provident earum dolor qui debitis.
+    </div>
+    <button onclick="textoAbaixo()">texto</button>
+    <script>
+        function mostraTelefone(elemento){
+            elemento.style.display='none'
+            document.getElementById('telefone').style.display='block'
+        }
+        function mostraimagem(){
+           
+           let cachorro = document.getElementById('img').setAttribute('src','/cachorro.jpg')
+        }
+        function textoAbaixo(){
+
+            document.getElementById('esconde').style.display='block';
+        }
+    </script>
+
+
+
+
+    <!-- <button onclick="azul()">Azul</button>
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="verde()">Verde</button>
+                 
+    <script>
+        /*function azul(){
+            limpar()
+           let azul =  document.getElementById('titulo').classList.add('azul');
+        }
+        function vermelho(){
+            limpar()
+            document.getElementById('titulo').classList.add('vermelho');
+        }
+        function verde(){
+            limpar()
+            document.getElementById('titulo').classList.add('verde');
+        }
+        function limpar(){
+            document.getElementById('titulo').classList.remove('azul')
+            document.getElementById('titulo').classList.remove('vermelho')
+            document.getElementById('titulo').classList.remove('verde')
+
+        }*/
+    </script>
+     -->.
+</body>
+</html>

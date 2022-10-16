@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Ola, seja bem vindo</h1>
+    <div id="dia">
+        
+    </div>
+    <script>
+        let dia = 2;
+        let diaNome= ''
+        switch (dia){
+            case 6:
+            case 7:
+                diaNome ='Fim de Semana'
+                break;
+            default:
+                diaNome = 'Dia de Semana'
+                break
+    }
+    document.getElementById('dia').innerHTML = 'Hoje é ' + diaNome
+    </script>
+</body>
+</html>

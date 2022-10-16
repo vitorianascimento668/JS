@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Promises
+    </title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        function pegarTemperatura(){
+            return new Promise (function(resolve,reject){
+                console.log('Pegando temperatura ...')
+
+                setTimeout(function(){
+                    resolve('40 na sombra')
+                },2000)
+            })
+        }
+       // Usando a PROMISE
+        /*Para pega a premise primeiro execultamos a function , e criamos uma variavel e depois jogamos no console
+        E de posse a variavel let = temp colocamos a variavel.then()> e entao quando você tive o resultado execulta isso aqui (CALLBACK*/
+        console.log('Codigo antes') //sicrono
+      let temp =  pegarTemperatura() //sicrono
+      console.log('Codigo durante') //sicrono
+      temp.then(function(resultado){ // prepara
+        console.log('Temperatura: ' + resultado)
+      })
+      temp.catch(function(error){ // prepara
+        console.log('Eita, deu erro!')
+      })
+      console.log('Codigo depois! ') //sicrono
+    </script>
+</body>
+</html>

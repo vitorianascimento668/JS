@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Rest
+
+    </title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        /* o operador REST serve para atribuir varios valores para uma unica variavel, sendo que precisamos colocar ...nomedavariavel ou parametro e assim, podemos passa varios valores para essa viavel que todos eles serão exibidos na tela.
+                            function adicionar(...nomes) {
+                                        console.log(nomes) }
+            adicionar('maria', 'joao' , 'bonieky' ,'vitoria ')
+        */
+        function add (nomes,...novosNomes) {
+
+            return [...novosNomes,...nomes]
+} 
+         let nomes= ['Bonieky', 'Paulo']        
+
+         let outros = add(nomes,'Antonio','Maria','Jose','Graca','Joseane','Dalva','Nicollao') 
+         console.log(outros)
+                     
+    </script>
+</body>
+</html>

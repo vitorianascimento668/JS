@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String, padStart, padEnd
+    </title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        /* O padEnd serve para preencher espaços que seriam obirgatorio está cheio, como o n de telefone de x digitos e ele faz a completação desse valor faltente
+                       let telefone = '15'
+                        console.log(telefone.padEnd(9,'*')) 
+
+        */
+       /* PadStart , a logica e a mesma do end, porem ele preenche para a esquerda e nao para a direita, no caso antes do valor definido pelo usuario
+                    let telefone = '15'
+                        console.log(telefone.padStart(9,'*'))
+       */
+        let carta = '1234123412341234';
+        let lastDigi = carta.slice(-4)
+        let cartaoMascarado = lastDigi.padEnd(16,'*')
+        console.log(`Este é o seu cartão? ${cartaoMascarado}`)
+    </script>
+</body>
+</html>

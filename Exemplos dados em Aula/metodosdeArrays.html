@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Arrasy</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        let lista = ['Ovo','Trigo','Leite','Chocolate','Fermento', 'Leite-condensado']
+        //O join faz o array vira uma STRING e separa os itens pelo que colocamos dentro do parenteses ('')
+        let res = lista.join('-') 
+        console.log(res)
+
+        //O pop() remove o PRIMEIRO item do Array.
+        let res2 = lista.pop() 
+        console.log(res2)
+
+        //O shift() remove o ULTIMO item do Array.
+        let res3 = lista.shift() 
+        console.log(res3)
+        console.log()
+
+        //O lista.lenght serve para ve a posição do ultimo item do array ou add mais valores.
+
+    </script>
+</body>
+</html>

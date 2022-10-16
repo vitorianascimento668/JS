@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas 3</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        // Para trocar o dia-ano-mes usamos o SET no lugar do GET.
+        let d = new Date();
+        d.setMonth(5)
+        let novoValor = d;
+        console.log(novoValor)
+        /*--------------------------------------------------*/
+        let d1 = new Date();
+        d1.setDate(d.getDate() + 250) // soma do dia atual + 5 dias
+        let novoValor2 = d1;
+        console.log(novoValor2)
+        //Pode-se aumenta quantas horas, data, ano e fazer quantas somas de datas nos quissermos
+        let m = new Date(2021,9,23);
+
+        m.setDate(m.getDate() + 100);
+
+        let aumentarData = m;
+
+        console.log(aumentarData);
+
+
+
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descontruindo Arrays</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <button onclick="comecar()">Rodar</button>
+    <button onclick="parar()">Parar</button>
+    <div class="demo">
+    </div>
+
+    <script>
+        /*A descontrução de array neste caso, é criado tudo da mesma forma do objeto, com a diferença de que no ARRAY, criamos tudo em ordem, exatamente como o array principal foi criado e dentro do let [] = info nos colocamos o nome que quissermos colocar, nao precisa copiar nada, ja que o array é em ordem númerica
+        ------------------------------------------------------
+            let [nomeCompleto,nome,sobrenome,instagram] = info
+            console.log(nomeCompleto,nome,sobrenome,instagram)
+        ------------------------------------------------------
+        */
+
+        /*
+            Podemos descontruir somente os itens que queremos usar, apenas deixando espaços com vigula vazio para aqueles que nao queremos
+                        let [nomeCompleto, , ,instagram] = info
+                        console.log(nomeCompleto,instagram)
+        */
+
+        /*
+        Outra forma de criar um array e já descontriulo, tudo ao mesmo tempo. 
+                let [nome,sobrenome,instagram] = ['Vitoria','Caroline','@CarolineNascimento']
+        */
+        function criar(){
+            
+            return [1,2,3]
+        }
+        let [a,b,c] = criar()
+        console.log(criar(a,b,c))
+
+        /* Aqui criamos uma FUNCTION e dentro dela um retorno.
+        Depois criamos uma variavel array que ira criar as var A,B,C e essas variaveis receberao o retorno da faction criar().
+        */
+
+    </script>
+</body>
+</html>

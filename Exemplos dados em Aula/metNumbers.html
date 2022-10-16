@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strigs parte 3</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        // Aqui o numero inteiro ira vira uma String.TO STRING
+        let n1 = 52;
+        console.log(n1.toString()) 
+
+        //Aqui o numero grandao, exibira no console, somente 2 caracteres após o ponto. TOFIXED
+        let n2 = 154.24851258850
+        console.log(n2.toFixed(2))
+
+        //Aqui o número que é uma string, ira vira numero inteiro novamente. PARSEINT(VALOR DIGITADO)
+        let n3 = '255'
+        console.log(parseInt(n3) + 19)
+
+
+
+
+    </script>
+</body>
+</html>

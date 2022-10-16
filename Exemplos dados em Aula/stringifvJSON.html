@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.parse
+
+    </title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        // PARSE = PEGA UMA STRING E TRANSFORMA EM JSON
+        // STRINGFY = PEGA UM JSON E TRANSFORMA EM STRING
+       let pessoa = JSON.parse('{"nome": "Bonieky", "idade":90}') //Virou OBJETO
+       console.log(pessoa)
+       console.log(JSON.stringify(pessoa)) // virou STRING
+    </script>
+</body>
+</html>

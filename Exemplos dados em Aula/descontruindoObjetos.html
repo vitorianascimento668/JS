@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descontruindo Objetos 1</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <button onclick="comecar()">Rodar</button>
+    <button onclick="parar()">Parar</button>
+    <div class="demo">
+    </div>
+    <script>
+        let pessoa = {
+            nome: 'Vitoria',
+            sobrenome:'Nascimento',
+            idade: 90,
+            social: {
+                facebook: '@nascimento688',
+                instagram: '@CarolineNascimento'
+            },
+            nomeCompleto:function(){
+                return `${this.nome} ${this.sobrenome}`
+            }
+        }
+        /*Para descontruir um objeto, podemos usa o seguinte modo, colocando o LET depois o sinal de objeto{} e depois o = e o nome do objeto que sera descontruido, e depois, dentro do {} colocamos as variaveis que queremos pega o valor que se encontra dentro do objeto princiapl.*/
+        let {
+            nome:pessoaNome,sobrenome,idade=10} = pessoa
+        console.log(pessoaNome,sobrenome,idade)
+
+
+
+        //Usando o dois pontos : podemos redefinir o nome da variavel que sera criada dentro do let, no luga da que esta no objeto.
+
+
+
+
+        /* Alternativa que NAO E MAIS USADA
+        let nome = pessoa.nome
+        let sobrenome = pessoa.sobrenome
+        let idade = pessoa.idade
+        let instagram = pessoa.social.instagram*/
+    </script>
+</body>
+</html>

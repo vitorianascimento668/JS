@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Arrasy</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        let lista = ['Ovo','Trigo','Leite','Chocolate','Fermento', 'Leite-condensado']
+
+         // Para deletar um item da lista, o 1 parametro passa qual e a posição do item e o 2 parametro e quantos itens voce quer remover
+         let res = lista.splice(1,1)
+         console.log(res)
+         console.log(lista)
+
+          // Usando o CONCAT, vamos junta as 2 lista em uma só lista de array.
+         let lista2 = ['Ovo','Trigo','Leite','Chocolate','Fermento', 'Leite-condensado']
+         let listadois = ['Prato', 'Liquidificador', 'Forno']
+         console.log(lista2.concat(listadois))
+
+         // ORDENAÇÃO EM ORDEM ALFABETICA SORT()
+         let lista3 = ['Ovo','Trigo','Leite','Chocolate','Fermento', 'Leite-condensado']
+         let resultado = lista3.sort()
+         console.log(resultado)
+       
+         // ORDENAÇÃO EM ORDEM CONTRARIA REVERSE()
+         let lista4 = ['Ovo','Trigo','Leite','Chocolate','Fermento', 'Leite-condensado']
+         let resultado1 = lista4.reverse()
+         console.log(resultado1)
+
+    </script>
+</body>
+</html>

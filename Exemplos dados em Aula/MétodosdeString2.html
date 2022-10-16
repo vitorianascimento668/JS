@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strigs parte 2</title>
+</head>
+<body>
+    <div id="titulo">
+        Olá mundo
+    </div>
+    <div id="campo">
+        Digite sua mensagem aqui
+    </div>
+    <script>
+        /*
+        SLICE -- PEGA VALOR NEGATIVO E FATIA AS STRINGS
+        SUBSTRING -- NÃO PEGA VALOR NEGATIVO E FATIA AS STRINGS
+        SUBSTR -- PEGA A POSICAO INICIAL E QUANTOS CARACTERES EU QUERO PEGA, igual aos outros de cima  slice 
+        */
+        function alterar(titulo,sub){
+            document.getElementById("titulo").innerHTML = titulo
+            document.getElementById("campo").innerHTML = sub
+        }
+        alterar("vitoria caroline nascimento e silva".slice(5,20),"vitoria caroline nascimento e silva".substr(5,20))
+
+
+    </script>
+</body>
+</html>
