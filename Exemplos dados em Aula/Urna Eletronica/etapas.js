@@ -4,7 +4,7 @@ let etapas = [
         numeros:2,
         candidatos:[
             {
-                numero:13,
+                numero:'13',
                 nome:'Lula',
                 partido:'PT',
                 fotos:[
@@ -12,7 +12,7 @@ let etapas = [
 
             },
             {
-                numero:45,
+                numero:'45',
                 nome:'Geraldo Alkimin',
                 partido:'PSDB',
                 fotos:[
@@ -25,7 +25,7 @@ let etapas = [
         numeros:5,
         candidatos:[
             {
-                numero: 13313,
+                numero:'12313',
                 nome:'Haddad',
                 partido:'PT',
                 vice:'Dilma',
@@ -36,7 +36,7 @@ let etapas = [
 
             },
             {
-                numero:45545,
+                numero:'12345',
                 nome:'Kassab',
                 partido:'PSDB',
                 vice:'Doria',
