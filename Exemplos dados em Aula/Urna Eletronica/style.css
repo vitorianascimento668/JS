@@ -123,14 +123,14 @@ body{
     text-align:center;
     font-size:14px;
 
+}.small{
+    width:70%;
+    font-size:12px;
 }
 .d-1-img img{
     width:100%;
 }
-.d-1-img img.small{
-    width:80%;
-    font-size:12px;
-}
+
 .d-2{
     height:50px;
     font-size:14px;
@@ -139,3 +139,11 @@ body{
     padding-top:3px;
 
 }
+.gigante{
+    font-weight: bold;
+    font-size:100px;
+    flex:1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}   
