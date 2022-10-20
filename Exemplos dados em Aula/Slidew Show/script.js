@@ -1,31 +1,26 @@
 let totalSlides = document.querySelectorAll('.slider--item').length
-let novaMargim = 0
-
+let  passeSlider = 0
 
 document.querySelector('.slider--width').style.width = `calc(100vw * ${totalSlides})`
 document.querySelector('.slider--controls').style.height = `${document.querySelector('.slider').clientHeight}px`
 function indo(){
-    if(novaMargim === 200){
-        novaMargim = 0 
-        updateMargin()
+    passeSlider ++
+    if(passeSlider > (totalSlides - 1) ){
+        passeSlider = 0
     }
-    else  if(novaMargim >= 0){
-        novaMargim += 100
-        updateMargin()
-    }
+    updateMargin()
 }
 function voltando(){
-   if (novaMargim === 0){
-        novaMargim = 200
-        updateMargin()   
-   }else   if (novaMargim > 0){
-        novaMargim -= 100 
-        updateMargin()   
-    }
-    
+    passeSlider --
+    if (passeSlider < 0){
+        passeSlider = totalSlides - 1 }
 
+        updateMargin()   
 }
 function updateMargin() {
-    document.querySelector('.slider--width').style.marginLeft = `-${novaMargim}vw`
+    let slidewidth = document.querySelector('.slider--item').clientWidth
+    let novaMargim = (passeSlider * slidewidth) 
+    document.querySelector('.slider--width').style.marginLeft = `-${novaMargim}px`
 }
 
+setInterval(indo, '5000')
