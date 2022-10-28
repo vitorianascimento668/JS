@@ -59,7 +59,7 @@ clickNum.forEach((marca,indice) =>{
 function tocaSom(){
     for (let i in audio){
         if (indicado == parseInt(numarray)){
-            return audio[parseInt(numarray)].play()
+            return audio[parseInt(numarray-1)].play()
 
         }
 }
