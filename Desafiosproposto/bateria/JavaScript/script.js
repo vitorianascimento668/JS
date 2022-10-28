@@ -11,35 +11,42 @@
 
 */
 let clickNum = document.querySelectorAll('.teclado--num')
+let audio = document.querySelectorAll('audio')
 let numarray = 0
+var indicado = ''
+
 
 clickNum.forEach((marca,indice) =>{
     marca.addEventListener('click',()=>{
         numarray = marca.getAttribute('data-num')
-        switch (indice){
-            case 0:
-                
-            break
+        
+        indicado = indice + 1
+        switch (indice+1){
             case 1:
-                
-            break
+                return tocaSom()
             case 2:
-
+                return tocaSom()
             break
             case 3:
-
+                return tocaSom()
             break
             case 4:
-
+                return tocaSom()
             break
             case 5:
-
+                return tocaSom()
             break
             case 6:
-
+                return tocaSom()
+            break
+            case 7:
+                return tocaSom()
             break
             case 8:
-                
+                return tocaSom()
+            break
+            case 9:
+                return tocaSom()
             break
         }
 
@@ -48,3 +55,12 @@ clickNum.forEach((marca,indice) =>{
     })
 })
 
+    
+function tocaSom(){
+    for (let i in audio){
+        if (indicado == parseInt(numarray)){
+            return audio[parseInt(numarray)].play()
+
+        }
+}
+}
