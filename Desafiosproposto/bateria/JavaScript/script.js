@@ -12,12 +12,14 @@
 */
 let clickNum = document.querySelectorAll('.teclado--num')
 let audio = document.querySelectorAll('audio')
+let botao = document.querySelector('button')
+let input = document.querySelector('input')
 let numarray = 0
 let indicado = ''
 
 
 
-clickNum.forEach((marca,indice) =>{
+clickNum.forEach((marca,indice) =>{ // evento do click
     marca.addEventListener('click',()=>{
         marca.style.border='3px solid yellow '
         setTimeout(()=>{
@@ -66,6 +68,18 @@ clickNum.forEach((marca,indice) =>{
 
     })
 })
+//adiconando funcionalidade de digitacao
+function digiteoSom(){
+    
+    botao.addEventListener('click',()=>{
+        var texto = input.value
+        alert(texto)
+    })
+
+       
+}
+
+
 
     
 function tocaSom(){
