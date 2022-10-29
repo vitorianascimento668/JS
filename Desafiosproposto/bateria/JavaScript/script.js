@@ -1,13 +1,10 @@
 /*
-
 1-) Colocar o item teclado--num em um array que seja funcional, para fazer alterações ------ OK------
 2-) Vamos pega esse item e adicionar uma função de click ------ OK------
 3-) apos pega o data num, vamos adicionar um SWHIT ------ OK------
 4-) Depois preciso colocar uma funçao que pegue o data--num ------ OK------
 5-) Apos adiciona o swhift temos que fazer a comparação de valor clicado com o valor do case ------ OK------
 6-) Adiciona um função de retorno com cada toque para cada valor selecionado
-
-
 
 */
 let clickNum = document.querySelectorAll('.teclado--num')
@@ -35,8 +32,6 @@ clickNum.forEach((marca,indice) =>{ // evento do click
         switch (indice+1){
             case 1:
                 return tocaSom() 
-
-        
             case 2:
                 return tocaSom()
             break
@@ -73,11 +68,21 @@ function digiteoSom(){
     
     botao.addEventListener('click',()=>{
         var texto = input.value
-        alert(texto)
+
+       
     })
 
        
 }
+/*
+1-) fazer uma funcao para envia os valores para a minha funcao principal
+2-) Agora fazer o comparitivo, sendo que cada valor digitado, precisa ser enviado para o nosso CASE, para fazer a tocagem
+3-) Esse valor digitado, também precisa ser comparado com o trocaSom, para pode atribuior o som que sera tocado
+4=) exibir o som atraves da caixa de texto
+5-) descobrir como clica no  teclado e o nosso som sair 
+
+
+*/
 
 
 
