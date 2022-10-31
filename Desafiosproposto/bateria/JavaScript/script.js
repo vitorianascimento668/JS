@@ -13,11 +13,14 @@ let botao = document.querySelector('button')
 let input = document.querySelector('input')
 let numarray = 0
 let indicado = ''
+let texto = ''
 
 
 
 clickNum.forEach((marca,indice) =>{ // evento do click
+    
     marca.addEventListener('click',()=>{
+        
         marca.style.border='3px solid yellow '
         setTimeout(()=>{
             marca.style.border='3px solid white '
@@ -27,7 +30,6 @@ clickNum.forEach((marca,indice) =>{ // evento do click
         
 
         numarray = marca.getAttribute('data-num')
-        
         indicado = indice + 1
         switch (indice+1){
             case 1:
@@ -62,24 +64,29 @@ clickNum.forEach((marca,indice) =>{ // evento do click
 
 
     })
+    botao.addEventListener('click',()=>{
+        
+        texto = input.value
+        indicado = texto
+        numarray  = texto
+       
+        tocaSom()
+
+    
+})
 })
 //adiconando funcionalidade de digitacao
-function digiteoSom(){
+
+
     
-    botao.addEventListener('click',()=>{
-        var texto = input.value
 
-       
-    })
-
-       
-}
 /*
-1-) fazer uma funcao para envia os valores para a minha funcao principal
-2-) Agora fazer o comparitivo, sendo que cada valor digitado, precisa ser enviado para o nosso CASE, para fazer a tocagem
-3-) Esse valor digitado, também precisa ser comparado com o trocaSom, para pode atribuior o som que sera tocado
+1-) fazer uma funcao para envia os valores para a minha funcao principal       ok----
+2-) Agora fazer o comparitivo, sendo que cada valor digitado, precisa ser enviado para o nosso CASE, para fazer a tocagem ok----
+3-) Esse valor digitado, também precisa ser comparado com o trocaSom, para pode atribuior o som que sera tocado ok ---
 4=) exibir o som atraves da caixa de texto
 5-) descobrir como clica no  teclado e o nosso som sair 
+
 
 
 */
