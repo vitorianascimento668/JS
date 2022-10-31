@@ -71,11 +71,13 @@ clickNum.forEach((marca,indice) =>{ // evento do click
         texto = input.value
         var con = 0
         if (texto.length > 1){
-            for (let i in texto){
-                contando = texto.slice(con,i)
-                indicado = contando
-                numarray  = contando
+            for (let i = 0; i < texto.length;i++){
+                
+                indicado = texto[con]
+                numarray  = texto[con]       
                 tocaSom()
+                con++
+
             }}
         else{
                 indicado = texto
@@ -97,8 +99,9 @@ clickNum.forEach((marca,indice) =>{ // evento do click
 1-) fazer uma funcao para envia os valores para a minha funcao principal       ok----
 2-) Agora fazer o comparitivo, sendo que cada valor digitado, precisa ser enviado para o nosso CASE, para fazer a tocagem ok----
 3-) Esse valor digitado, também precisa ser comparado com o trocaSom, para pode atribuior o som que sera tocado ok ---
-4=) exibir o som atraves da caixa de texto
+4=) exibir o som atraves da caixa de texto ok --
 5-) descobrir como clica no  teclado e o nosso som sair 
+6-) Fazer o tocaSom volta para nossa variavel do botao, até o toca som, estoura o loop
 
 
 
@@ -109,7 +112,9 @@ clickNum.forEach((marca,indice) =>{ // evento do click
     
 function tocaSom(){
         if (indicado == parseInt(numarray)){
+            
             return audio[parseInt(numarray-1)].play() 
+           
 
 
         
