@@ -12,6 +12,7 @@ let audio = document.querySelectorAll('audio')
 let botao = document.querySelector('button')
 let input = document.querySelector('input')
 let numarray = 0
+let contando = 0
 let indicado = ''
 let texto = ''
 
@@ -64,17 +65,29 @@ clickNum.forEach((marca,indice) =>{ // evento do click
 
 
     })
+
+})
     botao.addEventListener('click',()=>{
-        
         texto = input.value
-        indicado = texto
-        numarray  = texto
+        var con = 0
+        if (texto.length > 1){
+            for (let i in texto){
+                contando = texto.slice(con,i)
+                indicado = contando
+                numarray  = contando
+                tocaSom()
+            }}
+        else{
+                indicado = texto
+                numarray  = texto
+                tocaSom()
+        }
        
-        tocaSom()
+
 
     
 })
-})
+
 //adiconando funcionalidade de digitacao
 
 
