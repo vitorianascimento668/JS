@@ -14,7 +14,7 @@ let input = document.querySelector('input')
 let numarray = 0
 let contando = 0
 let indicado = ''
-let texto = ''
+let texto = []
 
 
 
@@ -67,28 +67,31 @@ clickNum.forEach((marca,indice) =>{ // evento do click
     })
 
 })
-    botao.addEventListener('click',()=>{
-        texto = input.value
-        var con = 0
-        if (texto.length > 1){
-            for (let i = 0; i < texto.length;i++){
-                
-                indicado = texto[con]
-                numarray  = texto[con]       
-                tocaSom()
-                con++
+    
+    function textoDigitado(){
+        
+            texto = input.value
+            var con = 0
+                if (texto.length > 1){
+                    for (let i = 0; i < texto.length;i++){
+                        
+                        indicado = texto[con]
+                        numarray  = texto[con]       
+                        tocaSom()
+                        con++
 
-            }}
-        else{
-                indicado = texto
-                numarray  = texto
-                tocaSom()
-        }
-       
+                    }}
+                else{
+                        indicado = texto
+                        numarray  = texto
+                        tocaSom() 
+            }
+}
+            
 
 
     
-})
+
 
 //adiconando funcionalidade de digitacao
 
@@ -112,11 +115,8 @@ clickNum.forEach((marca,indice) =>{ // evento do click
     
 function tocaSom(){
         if (indicado == parseInt(numarray)){
-            
-            return audio[parseInt(numarray-1)].play() 
            
-
-
+            return audio[parseInt(numarray-1)].play() 
         
 }
 }
