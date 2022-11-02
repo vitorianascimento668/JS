@@ -22,7 +22,7 @@ clickNum.forEach((marca,indice) =>{ // evento do click
     
     marca.addEventListener('click',()=>{
         
-        marca.style.border='3px solid yellow '
+        marca.style.border='3px solid blue '
         setTimeout(()=>{
             marca.style.border='3px solid white '
 
@@ -34,21 +34,22 @@ clickNum.forEach((marca,indice) =>{ // evento do click
         indicado = indice + 1
         switch (indice+1){
             case 1:
-                return tocaSom() 
+                return tocaSom() ,marca.style.border='3px solid green ' 
+                
             case 2:
-                return tocaSom()
+                return tocaSom() ,marca.style.border='3px solid red ' 
             break
             case 3:
-                return tocaSom()
+                return tocaSom() ,marca.style.border='3px solid yellow ' 
             break
             case 4:
-                return tocaSom()
+                return tocaSom(),marca.style.border='3px solid #ff6600 ' 
             break
             case 5:
-                return tocaSom()
+                return tocaSom() ,marca.style.border='3px solid grey' 
             break
             case 6:
-                return tocaSom()
+                return tocaSom(),marca.style.border='3px solid black ' 
             break
             case 7:
                 return tocaSom()
@@ -116,7 +117,7 @@ clickNum.forEach((marca,indice) =>{ // evento do click
 function tocaSom(){
         if (indicado == parseInt(numarray)){
            
-            return audio[parseInt(numarray-1)].play() 
+            return audio[parseInt(numarray-1)].play()
         
 }
 }
