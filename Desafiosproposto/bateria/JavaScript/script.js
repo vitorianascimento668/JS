@@ -16,6 +16,7 @@ let numarray = []
 let contando = 0
 let indicado = []
 let texto = ''
+let auxiliadora = []
 
 
 function comecei (){
@@ -44,18 +45,24 @@ var t = 1
   function textoDigitado(){
 
         texto = input.value
-        for (let i in texto){
-            var metade = texto.slice(v,t)
-            numarray = metade
-            indicado = metade
-            v++
-            t++
-          
 
+        for (let i = 0 ; i < texto.length; i++){   
+            
+            auxiliadora = texto.slice(v,t)
+           numarray = auxiliadora
+           indicado = auxiliadora
+            v++
+            t++     
+            if (v == texto.length){
+                i = 0
+                v = 0
+                t = 1
+            }
             
             escolha(parseInt(numarray),parseInt(indicado))
         }
-
+       numarray=0
+       indicado=0
     }
 
 
