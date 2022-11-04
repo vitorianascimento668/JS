@@ -11,13 +11,14 @@ let clickNum = document.querySelectorAll('.teclado--num')
 let audio = document.querySelectorAll('audio')
 let botao = document.querySelector('button')
 let input = document.querySelector('input')
-let numarray = 0
+let marca1= ''
+let numarray = []
 let contando = 0
-let indicado = ''
-let texto = []
+let indicado = []
+let texto = ''
 
 
-
+function comecei (){
 clickNum.forEach((marca,indice) =>{ // evento do click
     
     marca.addEventListener('click',()=>{
@@ -25,73 +26,37 @@ clickNum.forEach((marca,indice) =>{ // evento do click
         marca.style.border='3px solid blue '
         setTimeout(()=>{
             marca.style.border='3px solid white '
+            marca.style.color='white' 
 
-        },'100')
+        },'300')
 
         
-
+        marca1 = marca
         numarray = marca.getAttribute('data-num')
         indicado = indice + 1
-        switch (indice+1){
-            case 1:
-                return tocaSom() ,marca.style.border='3px solid green ' 
-                
-            case 2:
-                return tocaSom() ,marca.style.border='3px solid red ' 
-            break
-            case 3:
-                return tocaSom() ,marca.style.border='3px solid yellow ' 
-            break
-            case 4:
-                return tocaSom(),marca.style.border='3px solid #ff6600 ' 
-            break
-            case 5:
-                return tocaSom() ,marca.style.border='3px solid grey' 
-            break
-            case 6:
-                return tocaSom(),marca.style.border='3px solid black ' 
-            break
-            case 7:
-                return tocaSom()
-            break
-            case 8:
-                return tocaSom()
-            break
-            case 9:
-                return tocaSom()
-            break
-        }
-
-            
-
+        escolha(indicado,numarray)
 
     })
 
-})
-    
-    function textoDigitado(){
-        
-            texto = input.value
-            var con = 0
-                if (texto.length > 1){
-                    for (let i = 0; i < texto.length;i++){
-                        
-                        indicado = texto[con]
-                        numarray  = texto[con]       
-                        tocaSom()
-                        con++
+})}
+var v = 0
+var t = 1
+  function textoDigitado(){
 
-                    }}
-                else{
-                        indicado = texto
-                        numarray  = texto
-                        tocaSom() 
-            }
-}
+        texto = input.value
+        for (let i in texto){
+            var metade = texto.slice(v,t)
+            numarray = metade
+            indicado = metade
+            v++
+            t++
+          
+
             
+            escolha(parseInt(numarray),parseInt(indicado))
+        }
 
-
-    
+    }
 
 
 //adiconando funcionalidade de digitacao
@@ -112,12 +77,49 @@ clickNum.forEach((marca,indice) =>{ // evento do click
 */
 
 
+function escolha(v1,v2){
+    indicado = v1
+    numarray = v2
+    
+    switch (indicado){
+        case 1:
+            return tocaSom() ,marca1.style.border='3px solid green ' ,marca1.style.color='green' 
+            
+        case 2:
+            return tocaSom() ,marca1.style.border='3px solid red',marca1.style.color='red'  
+        break
+        case 3:
+            return tocaSom() ,marca1.style.border='3px solid yellow ' ,marca1.style.color='yellow ' 
+        break
+        case 4:
+            return tocaSom(),marca1.style.border='3px solid #ff6600 ' ,marca1.style.color='#ff6600 ' 
+        break
+        case 5:
+            return tocaSom() ,marca1.style.border='3px solid grey' ,marca1.style.color='grey ' 
+        break
+        case 6:
+            return tocaSom(),marca1.style.border='3px solid black ' ,marca1.style.color='black ' 
+        break
+        case 7:
+            return tocaSom(),marca1.style.border='3px solid  blueviolet' ,marca1.style.color='blueviolet ' 
+        break
+        case 8:
+            return tocaSom(),marca1.style.border='3px solid  blue' ,marca1.style.color='blue ' 
+        break
+        case 9:
+            return tocaSom(),marca1.style.border='3px solid  purple' ,marca1.style.color='purple ' 
+        break
+    }
+    
+   
+}
 
     
 function tocaSom(){
         if (indicado == parseInt(numarray)){
            
             return audio[parseInt(numarray-1)].play()
-        
+            
 }
 }
+comecei()
