@@ -17,6 +17,8 @@ let contando = 0
 let indicado = []
 let texto = ''
 let auxiliadora = []
+let contador = 0
+
 
 
 function comecei (){
@@ -43,7 +45,6 @@ clickNum.forEach((marca,indice) =>{ // evento do click
 var v = 0
 var t = 1
   function textoDigitado(){
-
         texto = input.value
 
         for (let i = 0 ; i < texto.length; i++){   
@@ -61,9 +62,11 @@ var t = 1
             
             escolha(parseInt(numarray),parseInt(indicado))
         }
-       numarray=0
-       indicado=0
+               
     }
+    
+       
+    
 
 
 //adiconando funcionalidade de digitacao
@@ -117,9 +120,12 @@ function escolha(v1,v2){
             return tocaSom(),marca1.style.border='3px solid  purple' ,marca1.style.color='purple ' 
         break
     }
+
     
-   
+    
+
 }
+
 
     
 function tocaSom(){
@@ -130,3 +136,14 @@ function tocaSom(){
 }
 }
 comecei()
+setInterval(()=>{
+    
+    if(contador < texto.length){
+        contador++
+        textoDigitado()
+        
+    }
+    
+    
+},'1000')
+
