@@ -6,18 +6,35 @@
 5-) Apos adiciona o swhift temos que fazer a comparação de valor clicado com o valor do case ------ OK------
 6-) Adiciona um função de retorno com cada toque para cada valor selecionado
 
+
+//adiconando funcionalidade de digitacao
+
+
+1-) fazer uma funcao para envia os valores para a minha funcao principal       ok----
+2-) Agora fazer o comparitivo, sendo que cada valor digitado, precisa ser enviado para o nosso CASE, para fazer a tocagem ok----
+3-) Esse valor digitado, também precisa ser comparado com o trocaSom, para pode atribuior o som que sera tocado ok ---
+4=) exibir o som atraves da caixa de texto ok --
+5-) descobrir como clica no  teclado e o nosso som sair 
+6-) Fazer o tocaSom volta para nossa variavel do botao, até o toca som, estoura o loop
+
+
+
 */
+
+
 let clickNum = document.querySelectorAll('.teclado--num')
 let audio = document.querySelectorAll('audio')
 let botao = document.querySelector('button')
 let input = document.querySelector('input')
-let marca1= ''
-let numarray = []
-let contando = 0
-let indicado = []
-let texto = ''
-let auxiliadora = []
+var v = 0
+var t = 1
 let contador = 0
+let marca1= ''
+let texto = ''
+let numarray = []
+let indicado = []
+let auxiliadora = []
+
 
 
 
@@ -42,9 +59,9 @@ clickNum.forEach((marca,indice) =>{ // evento do click
     })
 
 })}
-var v = 0
-var t = 1
+
   function textoDigitado(){
+    
         texto = input.value
 
         for (let i = 0 ; i < texto.length; i++){   
@@ -59,37 +76,44 @@ var t = 1
                 v = 0
                 t = 1
             }
+            if(contador < texto.length){
+                chamar()
+            }
             
             escolha(parseInt(numarray),parseInt(indicado))
-        }
-               
+           
+        }      
     }
     
-       
+var comprador = [] 
+var c = 0
+function corescolhida(){
+    clickNum.forEach((v1) =>{
+        comprador = v1.getAttribute('data-num')
+        if(comprador == auxiliadora){
+            v1.style.border='3px solid green ' 
+            v1.style.color='green'
+            false
     
-
-
-//adiconando funcionalidade de digitacao
-
-
+        }
+        else if(c < 1){
+            setInterval(()=>{
+                c++
+                v1.style.border='3px solid white '
+                v1.style.color='white' 
     
-
-/*
-1-) fazer uma funcao para envia os valores para a minha funcao principal       ok----
-2-) Agora fazer o comparitivo, sendo que cada valor digitado, precisa ser enviado para o nosso CASE, para fazer a tocagem ok----
-3-) Esse valor digitado, também precisa ser comparado com o trocaSom, para pode atribuior o som que sera tocado ok ---
-4=) exibir o som atraves da caixa de texto ok --
-5-) descobrir como clica no  teclado e o nosso som sair 
-6-) Fazer o tocaSom volta para nossa variavel do botao, até o toca som, estoura o loop
-
-
-
-*/
-
-
+            },'700')
+        }
+        
+    })
+}
 function escolha(v1,v2){
     indicado = v1
     numarray = v2
+
+    if (numarray == auxiliadora){
+        
+    }
     
     switch (indicado){
         case 1:
@@ -129,21 +153,25 @@ function escolha(v1,v2){
 
     
 function tocaSom(){
-        if (indicado == parseInt(numarray)){
-           
+        if (indicado == parseInt(numarray)){           
             return audio[parseInt(numarray-1)].play()
             
 }
 }
 comecei()
-setInterval(()=>{
-    
-    if(contador < texto.length){
-        contador++
-        textoDigitado()
-        
-    }
-    
-    
-},'1000')
 
+
+
+function chamar(){
+    setInterval(()=>{
+            if (contador < texto.length){   
+                contador++
+                textoDigitado()
+                
+            } 
+            
+},'900')}
+setInterval(()=>{
+    corescolhida()
+
+},'900')
