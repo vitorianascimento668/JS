@@ -129,16 +129,21 @@ function tocaSom(){
 }
 }
 function chamar(){
-    setInterval(()=>{
+    setTimeout(()=>{
             if (contador < texto.length){
                 contador++   
                 textoDigitado()
                 
-            } 
+            } else if (contador == texto.length){
+                contador = 0
+                chamar()
+            }
             
-},'1000')}
+},'500')}
 
-
+function limpeza(){
+   
+}
 
 
 comecei() // funcao  de "play"-------
