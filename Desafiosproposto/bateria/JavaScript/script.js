@@ -1,4 +1,150 @@
+let clickNum = document.querySelectorAll('.teclado--num')
+let audio = document.querySelectorAll('audio')
+let botao = document.querySelector('button')
+let input = document.querySelector('input')
+let v = 0
+let t = 1
+let contador = 0
+let c = 0
+let marca1= ''
+let texto = ''
+let numarray = []
+let indicado = []
+let auxiliadora = []
+
+function comecei (){
+clickNum.forEach((marca,indice) =>{ // evento do click
+    
+    marca.addEventListener('click',()=>{
+        
+        marca.style.border='3px solid blue '
+        marca.style.color='blue'
+        setTimeout(()=>{
+            marca.style.border='3px solid white '
+            marca.style.color='white' 
+
+        },'300')
+
+        
+        marca1 = marca
+        numarray = marca.getAttribute('data-num')
+        indicado = indice + 1
+        escolha(indicado,numarray)
+
+    })
+
+})}
+let contadoTexto = 0
+
+function textoDigitado(){ // Texto digitado na segunda caixa + botão
+    
+        texto = input.value
+                if(contadoTexto < texto.length){
+                auxiliadora = texto.slice(v,t)
+                v++
+                t++  
+                numarray = auxiliadora
+                indicado = auxiliadora
+   
+                if (v == texto.length){
+                    i = 0
+                    v = 0
+                    t = 1
+                }
+                
+                escolha(parseInt(indicado),parseInt(numarray))
+                chamar()
+                contadoTexto ++
+            }
+
+            if (contadoTexto == contador){
+                contadoTexto = 0 
+            
+            }
+            
+
+    }
+
+  
+    function corescolhida(){ // Aqui vai as cores quando clicarmos em cada item
+        clickNum.forEach((v1) =>{
+               if(v1.getAttribute('data-num') == auxiliadora){
+                    v1.classList.add('colorida')
+                    setTimeout(()=>{
+                        v1.classList.remove('colorida')
+        
+                },'500')
+                
+        
+               }
+    
+            
+        })
+    }
+    
+function escolha(v1,v2){
+    indicado = v1
+    numarray = v2
+
+    
+    switch (indicado){
+        case 1:
+            return tocaSom() ,corescolhida()
+            
+        case 2:
+            return tocaSom() ,corescolhida()
+        break
+        case 3:
+            return tocaSom() ,corescolhida()
+        break
+        case 4:
+            return tocaSom(),corescolhida()
+        break
+        case 5:
+            return tocaSom() ,corescolhida()
+        break
+        case 6:
+            return tocaSom(),corescolhida()
+        break
+        case 7:
+            return tocaSom(),corescolhida()
+        break
+        case 8:
+            return tocaSom(),corescolhida()
+        break
+        case 9:
+            return tocaSom(),corescolhida()
+        break
+    }
+
+
+}
+
+
+    
+function tocaSom(){
+        if (indicado == parseInt(numarray)){           
+            return audio[parseInt(numarray-1)].play()
+            
+}
+}
+function chamar(){
+    setInterval(()=>{
+            if (contador < texto.length){
+                contador++   
+                textoDigitado()
+                
+            } 
+            
+},'1000')}
+
+
+
+
+comecei() // funcao  de "play"-------
+
 /*
+
 1-) Colocar o item teclado--num em um array que seja funcional, para fazer alterações ------ OK------
 2-) Vamos pega esse item e adicionar uma função de click ------ OK------
 3-) apos pega o data num, vamos adicionar um SWHIT ------ OK------
@@ -20,158 +166,3 @@
 
 
 */
-
-
-let clickNum = document.querySelectorAll('.teclado--num')
-let audio = document.querySelectorAll('audio')
-let botao = document.querySelector('button')
-let input = document.querySelector('input')
-var v = 0
-var t = 1
-let contador = 0
-let marca1= ''
-let texto = ''
-let numarray = []
-let indicado = []
-let auxiliadora = []
-
-
-
-
-function comecei (){
-clickNum.forEach((marca,indice) =>{ // evento do click
-    
-    marca.addEventListener('click',()=>{
-        
-        marca.style.border='3px solid blue '
-        setTimeout(()=>{
-            marca.style.border='3px solid white '
-            marca.style.color='white' 
-
-        },'300')
-
-        
-        marca1 = marca
-        numarray = marca.getAttribute('data-num')
-        indicado = indice + 1
-        escolha(indicado,numarray)
-
-    })
-
-})}
-
-  function textoDigitado(){
-    
-        texto = input.value
-
-        for (let i = 0 ; i < texto.length; i++){   
-            
-            auxiliadora = texto.slice(v,t)
-           numarray = auxiliadora
-           indicado = auxiliadora
-            v++
-            t++     
-            if (v == texto.length){
-                i = 0
-                v = 0
-                t = 1
-            }
-            if(contador < texto.length){
-                chamar()
-            }
-            
-            escolha(parseInt(numarray),parseInt(indicado))
-           
-        }      
-    }
-    
-var comprador = [] 
-var c = 0
-function corescolhida(){
-    clickNum.forEach((v1) =>{
-        comprador = v1.getAttribute('data-num')
-        if(comprador == auxiliadora){
-            v1.style.border='3px solid green ' 
-            v1.style.color='green'
-            false
-    
-        }
-        else if(c < 1){
-            setInterval(()=>{
-                c++
-                v1.style.border='3px solid white '
-                v1.style.color='white' 
-    
-            },'700')
-        }
-        
-    })
-}
-function escolha(v1,v2){
-    indicado = v1
-    numarray = v2
-
-    if (numarray == auxiliadora){
-        
-    }
-    
-    switch (indicado){
-        case 1:
-            return tocaSom() ,marca1.style.border='3px solid green ' ,marca1.style.color='green' 
-            
-        case 2:
-            return tocaSom() ,marca1.style.border='3px solid red',marca1.style.color='red'  
-        break
-        case 3:
-            return tocaSom() ,marca1.style.border='3px solid yellow ' ,marca1.style.color='yellow ' 
-        break
-        case 4:
-            return tocaSom(),marca1.style.border='3px solid #ff6600 ' ,marca1.style.color='#ff6600 ' 
-        break
-        case 5:
-            return tocaSom() ,marca1.style.border='3px solid grey' ,marca1.style.color='grey ' 
-        break
-        case 6:
-            return tocaSom(),marca1.style.border='3px solid black ' ,marca1.style.color='black ' 
-        break
-        case 7:
-            return tocaSom(),marca1.style.border='3px solid  blueviolet' ,marca1.style.color='blueviolet ' 
-        break
-        case 8:
-            return tocaSom(),marca1.style.border='3px solid  blue' ,marca1.style.color='blue ' 
-        break
-        case 9:
-            return tocaSom(),marca1.style.border='3px solid  purple' ,marca1.style.color='purple ' 
-        break
-    }
-
-    
-    
-
-}
-
-
-    
-function tocaSom(){
-        if (indicado == parseInt(numarray)){           
-            return audio[parseInt(numarray-1)].play()
-            
-}
-}
-comecei()
-
-
-
-function chamar(){
-    setInterval(()=>{
-            if (contador < texto.length){   
-                contador++
-                textoDigitado()
-                
-            } 
-            
-},'900')}
-setInterval(()=>{
-    corescolhida()
-
-},'900')
