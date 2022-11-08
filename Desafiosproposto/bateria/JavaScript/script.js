@@ -54,6 +54,7 @@ function textoDigitado(){ // Texto digitado na segunda caixa + botão
                 
                 escolha(parseInt(indicado),parseInt(numarray))
                 chamar()
+                corescolhida()
                 contadoTexto ++
             }
 
@@ -133,17 +134,15 @@ function chamar(){
             if (contador < texto.length){
                 contador++   
                 textoDigitado()
+                corescolhida()
                 
             } else if (contador == texto.length){
                 contador = 0
                 chamar()
             }
             
-},'500')}
+},'300')}
 
-function limpeza(){
-   
-}
 
 
 comecei() // funcao  de "play"-------
