@@ -9,14 +9,23 @@ body{
 h1{
     font-size:40px;
 }
+form{
+    margin-top: -10px;
+
+}
 input{
     width: 200px;
     height:20px;
     border-radius:10%;
 
 }
+
 small{
     font-size: 15px;
+}
+footer{
+    margin-top:15px;
+    font-size:15px;
 }
 .conteiner{
     display:flex;
@@ -38,11 +47,13 @@ small{
 
 }
 .botao_busca{
-    margin-left: 20px;
-    height: 30px;
-    border: 3px solid grey;
-    border-radius: 50%;
-    width: 60px;
+    background-color: grey;
+    width: 50px;
+    font-size: 15px;
+    height: 25px;
+    margin-left: 30px;
+    border: 2px solid #222;
+    border-radius: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,9 +95,5 @@ small{
 .valor-temperatura,.valor-vento{
     margin-top: 0px;
     font-weight: bold;
-    
-}
-footer{
-    margin-top:15px;
-    font-size:15px;
+
 }
