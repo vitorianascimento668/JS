@@ -1,0 +1,92 @@
+
+body{
+    background-color:#2A2A2A;
+    margin:0;
+    padding: 0;
+    color:white;
+    font-size:30px;
+}
+h1{
+    font-size:40px;
+}
+input{
+    width: 200px;
+    height:20px;
+    border-radius:10%;
+
+}
+small{
+    font-size: 15px;
+}
+.conteiner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.container-1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.inputebotao{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.botao_busca{
+    margin-left: 20px;
+    height: 30px;
+    border: 3px solid grey;
+    border-radius: 50%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caixa_respota{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.temperatura{
+    margin-left:20px;
+
+}
+.tamanhopequeno{
+    font-size:15px;
+    color:grey;
+    margin-bottom: 0px;
+
+}
+.vento{
+    margin-left: 50px;
+}
+.nome-estado{
+    font-size:30px;
+    margin-top: 10px;
+}
+.imagem-vento,.imagem-temperatura{
+    width:100px;
+    height:100px;
+}
+.contaier-resposta{
+    border:3px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px #222; 
+
+    margin-right: 40px;
+    text-align: center;
+    background-color:#222;
+}
+.valor-temperatura,.valor-vento{
+    margin-top: 0px;
+    font-weight: bold;
+    
+}
+footer{
+    margin-top:15px;
+    font-size:15px;
+}

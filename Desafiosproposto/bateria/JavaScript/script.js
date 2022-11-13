@@ -54,7 +54,6 @@ function textoDigitado(){ // Texto digitado na segunda caixa + botão
                 
                 escolha(parseInt(indicado),parseInt(numarray))
                 chamar()
-                corescolhida()
                 contadoTexto ++
             }
 
@@ -70,6 +69,7 @@ function textoDigitado(){ // Texto digitado na segunda caixa + botão
     function corescolhida(){ // Aqui vai as cores quando clicarmos em cada item
         clickNum.forEach((v1) =>{
                if(v1.getAttribute('data-num') == auxiliadora){
+                    
                     v1.classList.add('colorida')
                     setTimeout(()=>{
                         v1.classList.remove('colorida')
@@ -141,7 +141,7 @@ function chamar(){
                 chamar()
             }
             
-},'300')}
+},'800')}
 
 
 
