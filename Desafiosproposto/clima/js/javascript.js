@@ -1,4 +1,5 @@
 let botao = document.querySelector('.botao_busca')
+let conversaoKevin = 0
 
 function fazerConversao (dadosdaURL) {
      dadosdaURL.map((parametro)=>{
@@ -28,9 +29,11 @@ var pegarTemperatura = async (lat,lon)=>{
 }
 
 let mostrarTemperatura = async (res) =>{
-
+        conversaoKevin = res.main.temp - 273.15
         document.querySelector('.nome-estado').innerHTML = `${res.name} - ${res.sys.country}`
         document.querySelector('.valor-vento').innerHTML = `${res.wind.speed}`
+        document.querySelector('.valor-temperatura').innerHTML = `${conversaoKevin.toFixed(2)}`
+
 
         console.log(res)
     
