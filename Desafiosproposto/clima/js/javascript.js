@@ -1,10 +1,22 @@
 let botao = document.querySelector('.botao_busca')
+let aguarde = document.querySelector('.aguarde')
+let container = document.querySelector('.contaier-resposta')
 let conversaoKevin = 0
+let quantidade = 0
 let nome = ''
 let pais = ''
 
+
 var clicou = async () =>{
-    document.querySelector('.contaier-resposta').style.display = 'block'
+    quantidade ++
+   if (quantidade == 1){
+    aguarde.style.display = 'block'
+    container.style.display = 'block'
+    setTimeout(()=>{
+        aguarde.style.display = 'none'
+
+    },'500')    
+   }
 
     let input = document.querySelector('input').value
     let url = `http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=1&appid=297c8e1c49b86f7d3cd75ffb4de43966
