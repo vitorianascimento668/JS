@@ -27,7 +27,7 @@ var clicou = async () =>{
     `
     let dados_url = await fetch(url) 
     let dados_url_json = await dados_url.json()
-        if(dados_url_json.length == 0){
+        if(dados_url_json.length == 0 || input.length == 0){
             error()
         }
         else{
@@ -56,6 +56,7 @@ function fazerConversao (dadosdaURL) {
 var pegarTemperatura = async (lat,lon)=>{
    
     let url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=297c8e1c49b86f7d3cd75ffb4de43966   `
+    let url3 = `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={API key}`
     var r = await fetch(url2)
     var resultado = await r.json()
    
