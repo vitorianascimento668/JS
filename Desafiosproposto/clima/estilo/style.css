@@ -87,7 +87,7 @@ footer{
 .contaier-resposta{
     border:3px solid rgb(0, 0, 0);
     box-shadow: 3px 3px #222; 
-
+    display:none;
     margin-right: 40px;
     text-align: center;
     background-color:#222;
