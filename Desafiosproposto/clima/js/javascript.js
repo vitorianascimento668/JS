@@ -75,9 +75,72 @@ let mostrarTemperatura = async (res) =>{
         climaUp(clima)
     
 }
+
 function climaUp (clima){
-        
+      let imgTemp =   document.getElementById('imagem')
+      imgTemp.style.display = "block"
+      let resultado_img = ''
+      console.log(clima)
+        switch (clima.toLowerCase()){
+            case "céu limpo":
+                resultado_img = "sol.png"
+            break
+            case "nublado":
+                resultado_img = "nublado.png"
+            break 
+            case "neblina":
+                resultado_img = "nublado.png"
+            break   
+            case "chuva forte":
+                resultado_img = "tempestade.png"
+            break
+            case "chuva leve":
+                resultado_img = "moderada.png"
+            break
+            case "chuva moderada":
+                resultado_img = "moderada.png"
+            break
+            case "névoa":
+                resultado_img = "nevoa.png"
+            break
+            case  "algumas nuvens":
+                resultado_img = "nevoa.png"
+            break
+            case "nuvens dispersas":
+                resultado_img = "chuvadispersa.png"
+            break
+            case "chuviscos com intensidade de raios":
+                resultado_img = "chuvadispersa.png"
+                break
+            case"garoa de leve intensidade":
+                resultado_img = ""
+
+            break
+            case "trovoada com chuva forte" :
+                resultado_img = "tempestade.png"
+            break
+            case "trovoada com chuva moderada" :
+                resultado_img = "tempestade.png"
+            break
+            case "trovoada com chuva fraca" :
+                resultado_img = "tempestade.png"
+            break
+            case "poeira":
+                resultado_img = "poeria.png"
+            break
+
+
+        }
+    
+      imgTemp.src = `./imagens/${resultado_img}`
+
 }
+
+
+
+
+
+
 function error (){
     document.querySelector('.error').style.display = 'block'
     container.style.display = 'none'
