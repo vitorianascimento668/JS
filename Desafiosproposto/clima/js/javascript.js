@@ -68,12 +68,15 @@ let mostrarTemperatura = async (res) =>{
         document.querySelector('.nome-estado').innerHTML = `${nome} - ${pais}`
         document.querySelector('.valor-vento').innerHTML = `${res.wind.speed}<small> km/h</small>`
         document.querySelector('.valor-temperatura').innerHTML = `${conversaoKevin.toFixed(2)} <small>°C</small>`
-        document.querySelector('.imagem-temperatura').innerHTML = `${res.weather[0].description}`
         idCidade = res.sys.id
         id = res.id
+        let clima = res.weather[0].description 
         
-        console.log(res ,'res')
+        climaUp(clima)
     
+}
+function climaUp (clima){
+        
 }
 function error (){
     document.querySelector('.error').style.display = 'block'

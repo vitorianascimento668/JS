@@ -86,6 +86,13 @@ footer{
     width:100px;
     height:100px;
 }
+.sol {
+    background: yellow;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+}
 .contaier-resposta{
     border:3px solid rgb(0, 0, 0);
     box-shadow: 3px 3px #222; 
