@@ -55,11 +55,10 @@ function fazerConversao (dadosdaURL) {
 
 var pegarTemperatura = async (lat,lon)=>{
    
-    let url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=297c8e1c49b86f7d3cd75ffb4de43966   `
-    let url3 = `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={API key}`
+    let url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=pt_br&appid=297c8e1c49b86f7d3cd75ffb4de43966` 
     var r = await fetch(url2)
     var resultado = await r.json()
-   
+        console.log(resultado)
         mostrarTemperatura(resultado)
     
 }
@@ -69,6 +68,7 @@ let mostrarTemperatura = async (res) =>{
         document.querySelector('.nome-estado').innerHTML = `${nome} - ${pais}`
         document.querySelector('.valor-vento').innerHTML = `${res.wind.speed}<small> km/h</small>`
         document.querySelector('.valor-temperatura').innerHTML = `${conversaoKevin.toFixed(2)} <small>°C</small>`
+        document.querySelector('.imagem-temperatura').innerHTML = `${res.weather[0].description}`
         idCidade = res.sys.id
         id = res.id
         
