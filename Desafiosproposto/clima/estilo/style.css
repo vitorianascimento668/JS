@@ -132,12 +132,14 @@ footer{
     display:flex;
     justify-content: center;
     align-items: center;
+    display:none;
+
 
 }
 .imagem-vento-ponteiro{
     transform: rotate(100deg);
-    width: 3px;
-    height: 30px;
+    width: 1px;
+    height: 25px;
     border-style: solid;
     border-width: 1px;
     border-color: transparent;

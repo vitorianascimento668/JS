@@ -58,7 +58,6 @@ var pegarTemperatura = async (lat,lon)=>{
     let url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=pt_br&appid=297c8e1c49b86f7d3cd75ffb4de43966` 
     var r = await fetch(url2)
     var resultado = await r.json()
-        console.log(resultado)
         mostrarTemperatura(resultado)
     
 }
@@ -71,6 +70,12 @@ let mostrarTemperatura = async (res) =>{
         idCidade = res.sys.id
         id = res.id
         let clima = res.weather[0].description 
+        let rotacao = res.wind.deg
+        console.log(rotacao)
+        document.querySelector(".imagem-vento").style.display = 'flex'
+        let ponteiro = document.querySelector('.imagem-vento-ponteiro')
+        ponteiro.style.transform= ` rotate(${rotacao}deg)
+        `
         
         climaUp(clima)
     
@@ -80,7 +85,6 @@ function climaUp (clima){
       let imgTemp =   document.getElementById('imagem')
       imgTemp.style.display = "block"
       let resultado_img = ''
-      console.log(clima)
         switch (clima.toLowerCase()){
             case "céu limpo":
                 resultado_img = "sol.png"
