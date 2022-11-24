@@ -11,6 +11,7 @@ let texto = ''
 let numarray = []
 let indicado = []
 let auxiliadora = []
+let contadorInput = ''
 
 function comecei (){
 clickNum.forEach((marca,indice) =>{ // evento do click
@@ -68,8 +69,7 @@ function textoDigitado(){ // Texto digitado na segunda caixa + botão
   
     function corescolhida(){ // Aqui vai as cores quando clicarmos em cada item
         clickNum.forEach((v1) =>{
-               if(v1.getAttribute('data-num') == auxiliadora){
-                    
+               if(v1.getAttribute('data-num') == auxiliadora){                    
                     v1.classList.add('colorida')
                     setTimeout(()=>{
                         v1.classList.remove('colorida')
@@ -117,6 +117,8 @@ function escolha(v1,v2){
             return tocaSom(),corescolhida()
         break
     }
+    chamar()        
+
 
 
 }
@@ -145,15 +147,41 @@ function chamar(){
 
 function eventoTeclado(){
     document.addEventListener('keypress', (e)=>{
-        indicado = e.code.slice(6,7)
-        numarray = e.code.slice(6,7)
-        escolha(parseInt(indicado),parseInt(numarray))
-        chamar()
-       
         
+        if (input.value.length == 0){
+            var v1 = e.code.slice(0,6)
+            if (v1 == "Numpad"){
+                indicado = e.code.slice(6,7)
+                numarray = e.code.slice(6,7)
+                auxiliadora = e.code.slice(6,7)
+                escolha(parseInt(indicado),parseInt(numarray))
+                chamar() 
+            }else{
+                indicado = e.code.slice(5,6)
+                numarray = e.code.slice(5,6)
+                auxiliadora = e.code.slice(5,6)
+                escolha(parseInt(indicado),parseInt(numarray))
+                chamar() 
+    }
+            
+            
+                    
 
+    
+        
+                }
+        else{
+            console.log('não')
+        }
+        
     }) 
+
 }
+input.addEventListener('keypress',(e)=>{
+    if(e.code == "Enter"){
+        e.preventDefault()
+    }
+})
 eventoTeclado()
 comecei() // funcao  de "play"-------
 
