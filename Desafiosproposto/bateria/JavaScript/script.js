@@ -143,8 +143,18 @@ function chamar(){
             
 },'800')}
 
+function eventoTeclado(){
+    document.addEventListener('keypress', (e)=>{
+        indicado = e.code.slice(6,7)
+        numarray = e.code.slice(6,7)
+        escolha(parseInt(indicado),parseInt(numarray))
+        chamar()
+       
+        
 
-
+    }) 
+}
+eventoTeclado()
 comecei() // funcao  de "play"-------
 
 /*
