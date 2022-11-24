@@ -9,7 +9,7 @@ let nome = ''
 let pais = ''
 
 
-var clicou = async () =>{
+var clicou = async (e) =>{
     quantidade ++
     document.querySelector('.error').style.display = 'none'
 
@@ -147,4 +147,14 @@ function error (){
    
 }
 botao.addEventListener('click',clicou)
+/*Aqui eu comecei criando uma variavel com meu input, depois criei um evento de teclado pra ele, depois passei como parametro o proprio evento, depois junto com o if perguntei se o e.code ou seja a tecla clicada é o enter, se for TRUE, ele vai previnir o envento de click do meu E. e depois chama a função de click, clicou !!*/ 
+let input = document.querySelector('input')
+input.addEventListener('keypress',(e)=>{
+    
+    if(e.code === 'Enter'){ 
+        e.preventDefault()
+       clicou()
 
+    
+   }
+})
