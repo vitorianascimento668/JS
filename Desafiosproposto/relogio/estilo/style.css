@@ -1,6 +1,10 @@
-body{
+*{
+    box-sizing: border-box;
     margin:0;
     border:0;
+}
+body{
+    
     background-color:#2A2A2A;
     color:white;
     font-family:Arial, Helvetica, sans-serif;
@@ -9,8 +13,14 @@ h1{
     font-size:25px;
     font-weight:bold;
     text-align: center;
+    padding-bottom: 20px;
 
 }
+.numeros{
+    position:relative;
+}
+
+
 .relogioemSi{
     display:flex;
     justify-content: center;
@@ -24,7 +34,6 @@ h1{
     height: 50vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
     
 .tracinho{
@@ -38,22 +47,78 @@ h1{
     width: 14px;
     height: 14px;
     border-radius: 63%;
-  
+
 }
 .ponteiro--horas{
     background-color: red;
     width: 3px;
     height: 120px;
-    transform: rotate(136deg);
+    position: relative;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: bottom;
 
 }
 .ponteiro--segundos{
     background-color: white;
     width: 3px;
     height: 90px;
-    transform: rotate(136deg);
     margin-left: 5px;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin:bottom;
+
 }
+.num {
+    font-size:15px;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    padding-top:12px;
+}
+.num1{
+    transform:rotate(0deg);
+
+}
+.num2{
+    transform:rotate(30deg);
+
+}
+.num3{
+    transform:rotate(60deg);
+
+}
+.num4{
+    transform:rotate(90deg);
+
+}
+.num5{
+    transform:rotate(120deg);
+
+}
+.num6{
+    transform:rotate(150deg);
+
+}
+.num7{
+    transform:rotate(180deg);
+
+}
+.num8{
+    transform:rotate(210deg);
+}
+.num9{
+    transform:rotate(240deg);
+
+}.num10{
+    transform:rotate(270deg);
+
+}.num11{
+    transform:rotate(300deg);
+
+}.num12{
+    transform:rotate(330deg);
+
+}
+
 
 
 
