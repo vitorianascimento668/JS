@@ -43,10 +43,13 @@ h1{
     
 }
 .bolinha{
-    background-color: white;
-    width: 14px;
-    height: 14px;
     border-radius: 63%;
+    border: 1px solid white;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    bottom: 0px;
+    left: 10px;
 
 }
 .ponteiro--segundos{
@@ -64,7 +67,6 @@ h1{
     background-color: white;
     width: 3px;
     height: 90px;
-    margin-left: 5px;
     transform: translateY(-50%) rotate(45deg);
     transform-origin:bottom;
     border-top-left-radius: 100%;
@@ -73,10 +75,8 @@ h1{
 }
 .ponteiro--horas{
     background-color: rgb(94, 94, 94);
-    margin-right: 5px;
     width: 3px;
     height: 60px;
-    margin-left: 5px;
     transform: translateY(-50%) rotate(45deg);
     transform-origin:bottom;
     border-top-left-radius: 100%;
