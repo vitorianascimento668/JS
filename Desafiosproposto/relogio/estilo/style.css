@@ -49,22 +49,38 @@ h1{
     border-radius: 63%;
 
 }
-.ponteiro--horas{
+.ponteiro--segundos{
     background-color: red;
     width: 3px;
     height: 120px;
     position: relative;
     transform: translateY(-50%) rotate(45deg);
     transform-origin: bottom;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
 
 }
-.ponteiro--segundos{
+.ponteiro--minutos{
     background-color: white;
     width: 3px;
     height: 90px;
     margin-left: 5px;
     transform: translateY(-50%) rotate(45deg);
     transform-origin:bottom;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+
+}
+.ponteiro--horas{
+    background-color: rgb(94, 94, 94);
+    margin-right: 5px;
+    width: 3px;
+    height: 60px;
+    margin-left: 5px;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin:bottom;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
 
 }
 .num {
