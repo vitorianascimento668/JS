@@ -1,3 +1,4 @@
+/* AQUI FALTA ARRUMA A BORDA DO MEU RELOGIO PARA ELA FICA FLEX */
 *{
     box-sizing: border-box;
     margin:0;
@@ -18,6 +19,9 @@ h1{
 }
 .numeros{
     position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -29,8 +33,8 @@ h1{
 }
 .relogioanalogico{ /*RELOGIO ANALOGICO */
     border-radius:50%;
-    /*border: 1px solid white;*/
-    width: 50vw;
+    border: 1px solid white;
+    width: 22vw;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -88,7 +92,7 @@ h1{
     position: absolute;
     width:100%;
     height: 100%;
-    padding-top:12px;
+    font-weight: 10px;
 }
 .num1{
     transform:rotate(0deg);
@@ -104,10 +108,13 @@ h1{
 }
 .num4{
     transform:rotate(90deg);
+    line-height: 10px;
 
 }
 .num5{
     transform:rotate(120deg);
+    line-height: 10px;
+
 
 }
 .num6{
@@ -120,18 +127,23 @@ h1{
 }
 .num8{
     transform:rotate(210deg);
+    line-height: 30px;
 }
 .num9{
     transform:rotate(240deg);
+    line-height: 40px;
 
 }.num10{
     transform:rotate(270deg);
+    line-height: 47px;
 
 }.num11{
     transform:rotate(300deg);
+    line-height: 47px;
 
 }.num12{
     transform:rotate(330deg);
+    line-height: 30px;
 
 }
 
