@@ -4,6 +4,7 @@ let botao = document.querySelector('button')
 let input = document.querySelector('input')
 let v = 0
 let t = 1
+var v1 = 0
 let contador = 0
 let c = 0
 let marca1= ''
@@ -41,21 +42,22 @@ function textoDigitado(){ // Texto digitado na segunda caixa + botão
     
         texto = input.value
                 if(contadoTexto < texto.length){
-                auxiliadora = texto.slice(v,t)
-                v++
-                t++  
+                auxiliadora = texto.slice(v,t) 
                 numarray = auxiliadora
                 indicado = auxiliadora
+                v++
+                t++ 
    
                 if (v == texto.length){
                     i = 0
                     v = 0
                     t = 1
                 }
+                contadoTexto ++
+
                 
                 escolha(parseInt(indicado),parseInt(numarray))
                 chamar()
-                contadoTexto ++
             }
 
             if (contadoTexto == contador){
@@ -144,12 +146,15 @@ function chamar(){
             }
             
 },'800')}
-
+let controle = 0
+let boleano = false
+var contandoosInput = input.value.length
 function eventoTeclado(){
     document.addEventListener('keypress', (e)=>{
-        
-        if (input.value.length == 0){
-            var v1 = e.code.slice(0,6)
+          if (controle == 0) {
+
+            v1 = e.code.slice(0,6)
+
             if (v1 == "Numpad"){
                 indicado = e.code.slice(6,7)
                 numarray = e.code.slice(6,7)
@@ -162,27 +167,31 @@ function eventoTeclado(){
                 auxiliadora = e.code.slice(5,6)
                 escolha(parseInt(indicado),parseInt(numarray))
                 chamar() 
-    }
-            
-            
-                    
-
+            }
+      }
+         else{
+            inputAtualizado()
+          } 
     
-        
-                }
-        else{
-            console.log('não')
-        }
-        
+          
     }) 
 
 }
+function inputAtualizado (epa){
+    input.addEventListener('click',()=>{
+        controle =  1
+        eventoTeclado()
+    })}
+
+
 input.addEventListener('keypress',(e)=>{
-    if(e.code == "Enter"){
+    if(e.code == "Enter" || e.code ==  'NumpadEnter' ){
         e.preventDefault()
+        textoDigitado()
     }
 })
 eventoTeclado()
+inputAtualizado()
 comecei() // funcao  de "play"-------
 
 /*

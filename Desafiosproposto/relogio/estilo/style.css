@@ -34,7 +34,7 @@ h1{
 .relogioanalogico{ /*RELOGIO ANALOGICO */
     border-radius:50%;
     border: 1px solid white;
-    width: 22vw;
+    min-width: 290px;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -94,7 +94,9 @@ h1{
     height: 100%;
     font-weight: 10px;
 }
-.num1{
+
+.num1 {
+    
     transform:rotate(0deg);
 
 }
@@ -146,27 +148,6 @@ h1{
     line-height: 30px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .numeros{ /*RELOGIO DIGITAL */
     font-size:50px;
     font-weight:bold;
