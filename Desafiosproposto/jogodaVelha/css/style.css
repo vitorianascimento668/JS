@@ -33,6 +33,10 @@ h1{
     border-bottom: 1px solid #aba8af2e;
     border-right: 1px solid #aba8af2e;
 }
+.tabuleiro_marc:hover{
+    background-color: rgb(147 145 145 / 19%);
+    cursor:pointer;
+}
 .botao_comum{
     width: 200px;
     background-color: #43436078;
