@@ -28,6 +28,7 @@ body{
     background-color: rgb(30 30 50);
     width: 200px;
     height: 50px;
+    
     margin-bottom: 10px;
     display:flex;
     align-items: center;
@@ -51,6 +52,7 @@ body{
     align-items: center;
     flex-direction: column;
     margin:30px;
+    text-transform: uppercase;
 
 }
 .botoes{
