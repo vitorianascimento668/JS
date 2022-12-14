@@ -3,16 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-h1{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
 body{
     background-color:rgb(24, 24, 44);
     font-size:20px;
     color:white;
+    font-family: Arial, Helvetica, sans-serif;
 
+}
+h1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 .tabuleiro{
     display: flex;
@@ -20,14 +22,21 @@ body{
     align-items: center;
 }
 .tabuleiro_marc{
-    width: 10px;
-    height: 5px;
-    background-color:rebeccapurple;
+    text-transform: uppercase;
+    color: #bd1190bd;
+    font-size:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    border-bottom: 1px solid #aba8af2e;
+    border-right: 1px solid #aba8af2e;
 }
 .botao_comum{
-    background-color: rgb(30 30 50);
     width: 200px;
-    height: 50px;
+    background-color: #43436078;
+    height: 30px;
     
     margin-bottom: 10px;
     display:flex;
@@ -35,17 +44,9 @@ body{
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid #80808059;
-    
+    border: 1px solid #80808059;}
 
 
-}
-
-.tabuleiro_div{
-    width: 1px;
-    height:200px;
-    background-color:red;
-}
 .resultado_jogador{
     display:flex;
     justify-content: center;
@@ -60,4 +61,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+}
+.mar8, .mar9, .mar7{
+    border-right: 1px solid transparent;
+}
+.mar6, .mar3, .mar9{
+    border-bottom: 1px solid transparent;
 }
